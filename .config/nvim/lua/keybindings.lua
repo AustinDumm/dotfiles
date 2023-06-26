@@ -67,7 +67,7 @@ wk.register({
             },
             g = {
                 name = "[g]it",
-                g = { function() require("Neogit").open() end, "[g]it" },
+                g = { function() require("neogit").open() end, "[g]it" },
             },
         },
     },
