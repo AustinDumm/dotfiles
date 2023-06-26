@@ -1,6 +1,3 @@
-if not table.unpack then
-    table.unpack = unpack
-end
 -- Global mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
 

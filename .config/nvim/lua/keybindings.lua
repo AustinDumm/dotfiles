@@ -64,7 +64,10 @@ wk.register({
                 f = { function() vim.lsp.buf.format { async = true } end, "[f]ormat" },
                 a = { function() vim.lsp.buf.code_action() end, "[a]ction" },
                 r = { function() vim.lsp.buf.rename() end, "[r]ename" },
-
+            },
+            g = {
+                name = "[g]it",
+                g = { function() require("Neogit").open() end, "[g]it" },
             },
         },
     },

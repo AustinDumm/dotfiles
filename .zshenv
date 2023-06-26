@@ -1,6 +1,4 @@
+if [[ -f "$HOME/.cargo/env" ]]; then
 . "$HOME/.cargo/env"
+fi
 
-export EDITOR=nvim
-
-source ~/.secrets/open-api-key.txt
-export OPENAI_API_KEY

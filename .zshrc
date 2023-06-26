@@ -5,6 +5,12 @@
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+export EDITOR=nvim
+
+if [[ -f "$HOME/.secrets/open-api-key.txt" ]]; then
+    source ~/.secrets/open-api-key.txt
+    export OPENAI_API_KEY
+fi
 
 source $(brew --prefix)/opt/zsh-vi-mode/share/zsh-vi-mode/zsh-vi-mode.plugin.zsh
 
