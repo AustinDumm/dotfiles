@@ -3,6 +3,7 @@
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export VMIN_LIB="$HOME/Dev/MessageExperiments/vmin_lib"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
 export EDITOR=nvim
@@ -133,3 +134,13 @@ SAVEHIST=1000
 unsetopt autocd beep extendedglob nomatch notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
+
+# Start tmux on term launch
+if command -v tmux &> /dev/null &&\
+    [ -n "$PS1" ] &&\
+    [[ ! "$TERM" =~ screen ]] &&\
+    [[ ! "$TERM" =~ tmux ]] &&\
+    [ -z "$TMUX" ]; then
+  exec tmux
+fi
+

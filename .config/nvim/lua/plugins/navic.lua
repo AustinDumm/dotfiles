@@ -3,7 +3,10 @@ return {
     dependencies = "nvim-lspconfig",
     opts = {
         lsp = {
-            auto_attach = true
+            auto_attach = true,
+            preference = {
+                "java-language-server"
+            },
         },
         highlight = true,
     }

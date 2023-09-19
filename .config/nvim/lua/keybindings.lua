@@ -26,7 +26,7 @@ wk.register({
                 name = "[f]ind",
                 f = { function() require("telescope.builtin").find_files(telescope_config) end, "[f]iles" },
                 g = { function() require("telescope.builtin").live_grep(telescope_config) end, "[g]rep" },
-                b = { function() require("telescope.builtin").buffer(telescope_config) end, "[b]uffer" },
+                b = { function() require("telescope.builtin").buffers(telescope_config) end, "[b]uffer" },
                 h = { function() require("telescope.builtin").help_tags(telescope_config) end, "[h]elp" },
                 r = { function() require("telescope.builtin").registers(telescope_config) end, "[r]egisters" },
                 m = { function() require("telescope.builtin").marks() end, "[m]arks" },
