@@ -11,21 +11,16 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
         -- Buffer local mappings.
         -- See `:help vim.lsp.*` for documentation on any of the below functions
-        require("which-key").register(
+        require("which-key").add(
             {
-                g = {
-                    name = "[g]oto",
-                    d = { function() vim.lsp.buf.definition() end, "[d]efinition" },
-                    D = { function() vim.lsp.buf.declaration() end, "[D]efinition" },
-                    y = { function() vim.lsp.buf.type_definition() end, "T[y]pe definition" },
-                    i = { function() vim.lsp.buf.implementation() end, "[i]mplementation" },
-                    r = { function() vim.lsp.buf.references() end, "[r]eferences" },
-                },
-                K = { function() vim.lsp.buf.hover() end, "Hover" },
-                ["C-k"] = { function() vim.lsp.buf.signature_help() end, "Signature" },
-            },
-            {
-                buffer = ev.buf
+                { "<leader>g", group = "[g]oto" },
+                { "<leader>gd", function() vim.lsp.buf.definition() end, desc = "[d]efinition", buffer = ev.buf },
+                { "<leader>gD", function() vim.lsp.buf.declaration() end, desc = "[D]efinition", buffer = ev.buf },
+                { "<leader>gy", function() vim.lsp.buf.type_definition() end, desc = "T[y]pe definition", buffer = ev.buf },
+                { "<leader>gi", function() vim.lsp.buf.implementation() end, desc = "[i]mplementation", buffer = ev.buf },
+                { "<leader>gr", function() vim.lsp.buf.references() end, desc = "[r]eferences", buffer = ev.buf },
+                { "K", function() vim.lsp.buf.hover() end, desc = "Hover", buffer = ev.buf },
+                { "C-k", function() vim.lsp.buf.signature_help() end, desc = "Signature", buffer = ev.buf },
             }
         )
     end,
