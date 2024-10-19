@@ -6,7 +6,10 @@ export ZSH="$HOME/.oh-my-zsh"
 export VMIN_LIB="$HOME/Dev/MessageExperiments/vmin_lib"
 export PATH="/usr/local/bin:$PATH"
 export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/usr/local/share/dotnet/dotnet:$PATH"
 export EDITOR=nvim
+export DEV="$HOME/Dev/"
+export SWIFT_TOOLCHAIN="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/"
 
 if [[ -f "$HOME/.secrets/open-api-key.txt" ]]; then
     source ~/.secrets/open-api-key.txt
@@ -136,11 +139,21 @@ bindkey -v
 # End of lines configured by zsh-newuser-install
 
 # Start tmux on term launch
-if command -v tmux &> /dev/null &&\
-    [ -n "$PS1" ] &&\
-    [[ ! "$TERM" =~ screen ]] &&\
-    [[ ! "$TERM" =~ tmux ]] &&\
-    [ -z "$TMUX" ]; then
-  exec tmux
-fi
+#if command -v tmux &> /dev/null &&\
+#    [ -n "$PS1" ] &&\
+#    [[ ! "$TERM" =~ screen ]] &&\
+#    [[ ! "$TERM" =~ tmux ]] &&\
+#    [ -z "$TMUX" ]; then
+#  exec tmux
+#fi
 
+alias love="/Applications/love.app/Contents/MacOS/love"
+
+
+[ -f "/Users/adumm/.ghcup/env" ] && source "/Users/adumm/.ghcup/env" # ghcup-env
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# opam configuration
+[[ ! -r /Users/adumm/.opam/opam-init/init.zsh ]] || source /Users/adumm/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

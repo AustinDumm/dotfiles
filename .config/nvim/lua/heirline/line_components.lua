@@ -6,6 +6,7 @@ local colors = {
     bright_bg = utils.get_highlight("Folded").bg,
     bright_fg = utils.get_highlight("Folded").fg,
     dark_bg = "#3a3a3a",
+    empty_bg = theme_colors.background,
     dark_fg = theme_colors.foreground,
     red = utils.get_highlight("DiagnosticError").fg,
     dark_red = utils.get_highlight("DiffDelete").bg,
@@ -442,7 +443,8 @@ local BufferLine = utils.make_buflist(
 -- by the way, open a lot of buffers and try clicking them ;)
 )
 
-local Align = { provider = "%=", hl = { bg = "dark_bg" } }
+local AlignStatus = { provider = "%=", hl = { bg = "dark_bg" } }
+local AlignWin = { provider = "%=", hl = { bg = "empty_bg" } }
 local Space = { provider = " " }
 
 local Empty = {
@@ -581,7 +583,8 @@ return {
     git = Git,
     buffer_line = BufferLine,
     tab_pages = TabPages,
-    align = Align,
+    align_status = AlignStatus,
+    align_win = AlignWin,
     space = Space,
     empty = Empty,
     show_cmd = ShowCmd,

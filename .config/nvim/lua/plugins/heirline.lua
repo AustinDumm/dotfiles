@@ -12,16 +12,19 @@ return {
                 line_components.status_icon,
                 line_components.empty,
                 line_components.diagnostics,
-                line_components.align,
+                line_components.align_status,
                 line_components.empty,
                 line_components.ruler,
                 line_components.scroll_bar,
             },
-            winbar = line_components.navic,
+            winbar = {
+                line_components.navic,
+                line_components.align_win,
+            },
             tabline = {
                 line_components.buffer_line,
                 line_components.tab_pages,
-            }
+            },
         }
     end,
     dependencies = {

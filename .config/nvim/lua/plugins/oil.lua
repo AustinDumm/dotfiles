@@ -129,7 +129,6 @@ return {
             callback = function()
                 print(vim.bo.filetype)
                 if vim.bo.filetype == "oil" or vim.bo.filetype == "oil_preview" then
-                    print("HI")
                     vim.opt.winbar = nil
                 end
             end

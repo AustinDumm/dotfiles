@@ -30,3 +30,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
         )
     end,
 })
+
+require("lspconfig").sourcekit.setup {
+    cmd = {os.getenv("SWIFT_TOOLCHAIN") .. "/usr/bin/sourcekit-lsp"}
+}
+
