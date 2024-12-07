@@ -13,12 +13,11 @@ vim.api.nvim_create_autocmd('LspAttach', {
         -- See `:help vim.lsp.*` for documentation on any of the below functions
         require("which-key").add(
             {
-                { "<leader>g", group = "[g]oto" },
-                { "<leader>gd", function() vim.lsp.buf.definition() end, desc = "[d]efinition", buffer = ev.buf },
-                { "<leader>gD", function() vim.lsp.buf.declaration() end, desc = "[D]efinition", buffer = ev.buf },
-                { "<leader>gy", function() vim.lsp.buf.type_definition() end, desc = "T[y]pe definition", buffer = ev.buf },
-                { "<leader>gi", function() vim.lsp.buf.implementation() end, desc = "[i]mplementation", buffer = ev.buf },
-                { "<leader>gr", function() vim.lsp.buf.references() end, desc = "[r]eferences", buffer = ev.buf },
+                { "gd", function() vim.lsp.buf.definition() end, desc = "[d]efinition", buffer = ev.buf },
+                { "gD", function() vim.lsp.buf.declaration() end, desc = "[D]efinition", buffer = ev.buf },
+                { "gy", function() vim.lsp.buf.type_definition() end, desc = "T[y]pe definition", buffer = ev.buf },
+                { "gI", function() vim.lsp.buf.implementation() end, desc = "[i]mplementation", buffer = ev.buf },
+                { "gr", function() vim.lsp.buf.references() end, desc = "[r]eferences", buffer = ev.buf },
                 { "K", function() vim.lsp.buf.hover() end, desc = "Hover", buffer = ev.buf },
                 { "C-k", function() vim.lsp.buf.signature_help() end, desc = "Signature", buffer = ev.buf },
             }
@@ -29,4 +28,6 @@ vim.api.nvim_create_autocmd('LspAttach', {
 require("lspconfig").sourcekit.setup {
     cmd = {os.getenv("SWIFT_TOOLCHAIN") .. "/usr/bin/sourcekit-lsp"}
 }
+
+require("lspconfig").gleam.setup({})
 

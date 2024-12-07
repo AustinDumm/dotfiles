@@ -51,6 +51,5 @@ wk.add({
     { "<leader>la", function() vim.lsp.buf.code_action() end, desc = "[a]ction", silent = true, noremap = true },
     { "<leader>lr", function() vim.lsp.buf.rename() end, desc = "[r]ename", silent = true, noremap = true },
     { "<leader>g", group = "[g]it" },
-    { "<leader>gg", function() require("neogit").open() end, desc = "[g]it", silent = true, noremap = true }
-    }
-)
+    { "<leader>gg", function() require("neogit").open() end, desc = "[g]it", silent = true, noremap = true },
+})

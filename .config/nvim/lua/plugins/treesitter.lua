@@ -1,7 +1,14 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     opts = {
-        enusure_installed = { "c", "rust", "lua" },
+        enusure_installed = {
+            "c",
+            "rust",
+            "lua",
+            "luadoc",
+            "vimdoc",
+            "markdown",
+        },
         sync_install = false,
         auto_install = false,
         highlight = {

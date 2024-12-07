@@ -138,16 +138,8 @@ unsetopt autocd beep extendedglob nomatch notify
 bindkey -v
 # End of lines configured by zsh-newuser-install
 
-# Start tmux on term launch
-#if command -v tmux &> /dev/null &&\
-#    [ -n "$PS1" ] &&\
-#    [[ ! "$TERM" =~ screen ]] &&\
-#    [[ ! "$TERM" =~ tmux ]] &&\
-#    [ -z "$TMUX" ]; then
-#  exec tmux
-#fi
-
 alias love="/Applications/love.app/Contents/MacOS/love"
+alias emacs="emacs -nw"
 
 
 [ -f "/Users/adumm/.ghcup/env" ] && source "/Users/adumm/.ghcup/env" # ghcup-env
