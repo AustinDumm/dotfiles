@@ -1,0 +1,63 @@
+:t compare
+findFirstNumber wordNumberLookup "oneeight"
+findLastNumber wordNumberLookup "oneeight"
+findLastNumber wordNumberLookup "eight"
+findLastNumber wordNumberLookup "one"
+fmap ((+) 3) $ Just 5
+fmap ((+) 3) Just 5
+:t ((+) 3)
+maybe ((+) 3) Just 5
+(length "1234")
+:t length
+(1,2,3) !! 0
+head (1,2,3)
+first (1, 2, 3)
+(1, 2, 3) !! 0
+head []
+convertWordNumbers wordLookup "eightthree"
+convertWordNumbers wordLookup "eightwothree"
+convertWordNumbers wordLookup "onetwoonethreefourasdfasdffive"
+stringReplace "AfourB" "4" 1 4
+stringReplace "AfourB" "4" 1 4
+:t stringReplace
+:t length
+length
+:t drop
+[] == []
+[] = []
+[]
+()
+() = ()
+:t isEmpty
+:t empty
+empty
+(1, 2, 3).0
+first (1, 2, 3)
+(1, 2, 3)
+['a', 'b']
+['a' 'b']
+:t (head "asdf")
+[(head "asdf") (tail "asdf")]
+[(head "asdf") (tail "asdf"]
+String ['a' 'b' 'c']
+String
+"asdf"++"qwer"
+(head "this") ++ (last "this")
+:t head
+: head
+head
+take 1 "this"
+:t take 1 "this"
+last "this"
+first "AHH"
+last "AHH"
+:t last
+last
+take 1 "AHHH"
+:t take
+:t first
+:t filter
+filter
+getLine
+:t getLine
+k
